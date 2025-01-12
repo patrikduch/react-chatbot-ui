@@ -12,11 +12,9 @@ import {
   Typography,
   Avatar,
 } from "@mui/material";
-import { SendIcon } from "lucide-react";
-
-import CloseIcon from '@mui/icons-material/Close';
-import ChatIcon from '@mui/icons-material/Chat';
-
+import { Send as SendIcon } from "lucide-react";
+import CloseIcon from "@mui/icons-material/Close";
+import ChatIcon from "@mui/icons-material/Chat";
 
 const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -121,6 +119,12 @@ const Chatbot: React.FC = () => {
             <TextField
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  handleSendMessage();
+                }
+              }}
               fullWidth
               placeholder="Type a message..."
               size="small"
