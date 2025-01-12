@@ -69,7 +69,7 @@ const Chatbot: React.FC = () => {
         >
           {/* Header */}
           <CardHeader
-            avatar={<Avatar sx={{ bgcolor: "#007bff" }}>D</Avatar>}
+            avatar={<Avatar sx={{ bgcolor: "#007bff" }}>PD</Avatar>}
             title="Chatbot"
             action={
               <IconButton onClick={togglePopup}>
