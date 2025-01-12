@@ -73,7 +73,7 @@ const Chatbot: React.FC = () => {
             title="Chatbot"
             action={
               <IconButton onClick={togglePopup}>
-                <CloseIcon />
+                <CloseIcon sx={{ color: "white" }} />
               </IconButton>
             }
             sx={{ bgcolor: "#007bff", color: "white" }}
