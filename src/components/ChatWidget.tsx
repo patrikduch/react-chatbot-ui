@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Box,
   Button,
@@ -16,7 +16,7 @@ import { Send as SendIcon } from "lucide-react";
 import CloseIcon from "@mui/icons-material/Close";
 import ChatIcon from "@mui/icons-material/Chat";
 
-const Chatbot: React.FC = () => {
+const ChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<{ text: string; sender: "User" | "AI" }[]>([]);
   const [input, setInput] = useState("");
@@ -159,4 +159,4 @@ const Chatbot: React.FC = () => {
   );
 };
 
-export default Chatbot;
+export default ChatWidget;
